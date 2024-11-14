@@ -52,7 +52,11 @@ public class Cliente {
                         System.out.println("Resultado de la multiplicación: " + objetoRemoto.multiplicacion(valor1, valor2));
                         break;
                     case 4:
-                        System.out.println("Resultado de la división: " + objetoRemoto.division(valor1, valor2));
+                        if (valor2 == 0) {
+                            System.out.println("Error: División por cero no permitida.");
+                        } else {
+                            System.out.println("Resultado de la división: " + objetoRemoto.division(valor1, valor2));
+                        }
                         break;
                     default:
                         System.out.println("Opción no válida");
